@@ -4,15 +4,17 @@
  * @Author: VLOU
  * @Date: 2022-04-20 16:33:51
  * @LastEditors: VLOU
- * @LastEditTime: 2022-04-21 23:35:16
+ * @LastEditTime: 2022-05-05 22:57:02
  */
+
+import performObject from './lib/is_type'
+import { imageAr } from './lib/supported'
 
 /**
  * 
  * @param {array} supportTypeAr ['.jpg','.doc']
  * @param {string} mine 'image/jpg'
  */
- const imageAr = ['.jpg', '.jpeg', '.png', '.ioc', '.gif', '.svg', '.webp']
 
  function splitSupportTypeAr(supportTypeAr, type) {
    const imgAr = []
@@ -27,29 +29,6 @@
    }
  
    return type === 'img' ? imgAr : txtAr
- }
- 
- function is_image(mime, t) {
-   return mime === 'image/' + t.split('.')[1]
- }
- 
- function is_docx(mime) {
-   return mime === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
- }
- 
- function is_doc(mime) {
-   return mime === 'application/x-cfb' || mime === 'application/msword'
- }
- 
- function is_pdf(mime) {
-   return mime === 'application/pdf'
- }
- 
- const performObject = {
-   is_docx,
-   is_doc,
-   is_pdf,
-   is_image
  }
  
  export function verifyFormat(supportTypeAr, mime, name) {
