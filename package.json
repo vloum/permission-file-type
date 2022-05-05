@@ -1,6 +1,6 @@
 {
   "name": "permission-file-type",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "校验需要上传文件格式",
   "main": "index.js",
   "scripts": {
