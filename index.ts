@@ -4,10 +4,10 @@
  * @Author: VLOU
  * @Date: 2022-04-20 16:33:51
  * @LastEditors: VLOU
- * @LastEditTime: 2022-05-05 22:57:02
+ * @LastEditTime: 2022-05-15 00:33:26
  */
 
-import performObject from './lib/is_type'
+import {functionObject as performObject} from './lib/is_type'
 import { imageAr } from './lib/supported'
 
 /**
@@ -16,7 +16,7 @@ import { imageAr } from './lib/supported'
  * @param {string} mine 'image/jpg'
  */
 
- function splitSupportTypeAr(supportTypeAr, type) {
+ function splitSupportTypeAr(supportTypeAr:string[], type?:string) {
    const imgAr = []
    const txtAr = []
  
@@ -31,7 +31,7 @@ import { imageAr } from './lib/supported'
    return type === 'img' ? imgAr : txtAr
  }
  
- export function verifyFormat(supportTypeAr, mime, name) {
+ export function verifyFormat(supportTypeAr:string[], mime:string, name:string) {
    // 先判断mime类型
    let type = ''
    if (mime) {
