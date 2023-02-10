@@ -24,3 +24,7 @@ export interface isTypeFunctionType {
 export interface optionsTypes extends isTypeFunctionType {
   verifyFormat: Function
 }
+
+declare const permission: optionsTypes 
+
+export default permission
