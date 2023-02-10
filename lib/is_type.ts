@@ -8,8 +8,11 @@
  */
 import { isTypeFunctionType } from '../types/index'
 
-function is_image(mime: string, t:string):boolean {
-  return mime === 'image/' + t.split('.')[1]
+function is_image(mime: string, t?:string):boolean {
+  if(!t){
+    throw new Error('缺少图片后缀')
+  }
+  return mime === 'image/' + t?.split('.')[1]
 }
 
 function is_docx(mime: string):boolean {
@@ -36,7 +39,7 @@ function is_txt(mime: string):boolean {
   return mime === 'text/plain'
 }
 
-export const functionObject: isTypeFunctionType = {
+export default {
   is_docx,
   is_doc,
   is_pdf,

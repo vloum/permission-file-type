@@ -20,3 +20,7 @@ export interface isTypeFunctionType {
   is_pptx: Function;
   is_txt: Function;
 }
+
+export interface optionsTypes extends isTypeFunctionType {
+  verifyFormat: Function
+}

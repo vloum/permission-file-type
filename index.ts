@@ -7,8 +7,9 @@
  * @LastEditTime: 2022-05-15 00:33:26
  */
 
-import { functionObject as performObject } from './lib/is_type'
+import  performObject from './lib/is_type'
 import { imageAr } from './lib/supported'
+import { optionsTypes } from './types'
 
 /**
  * 
@@ -70,6 +71,6 @@ function verifyFormat(supportTypeAr: Array<string>, mime: string, name: string):
   return false
 }
 
-const options = Object.assign({ verifyFormat }, performObject)
+const options = Object.assign({ verifyFormat }, performObject) as optionsTypes
 
 export default options
