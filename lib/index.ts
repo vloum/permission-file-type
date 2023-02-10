@@ -7,9 +7,9 @@
  * @LastEditTime: 2022-05-15 00:33:26
  */
 
-import  performObject from './lib/is_type'
-import { imageAr } from './lib/supported'
-import { optionsTypes } from './types'
+import  performObject from './is_type'
+import { imageAr } from './supported'
+import { optionsTypes } from '../types'
 
 /**
  * 
@@ -18,8 +18,8 @@ import { optionsTypes } from './types'
  */
 
 function splitSupportTypeAr(supportTypeAr: string[], type?: string) {
-  const imgAr = []
-  const txtAr = []
+  const imgAr: Array<string> = []
+  const txtAr: Array<string> = []
 
   for (const extname of supportTypeAr) {
     if (imageAr.includes(extname)) {

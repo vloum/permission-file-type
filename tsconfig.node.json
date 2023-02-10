@@ -10,6 +10,5 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "dist"],
-  "include": ["./lib/**/*", "./rollup.config.ts", "./types/**/*", "./lib/index.ts"]
+  "include": ["./lib/**/*", "./types/**/*"]
 }
