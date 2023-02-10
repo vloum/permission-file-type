@@ -1,5 +1,5 @@
 # 下载
-npm i permission-file-type
+`npm i permission-file-type`
 # permission-file-type
 校验文件类型
 # 解决的痛点
