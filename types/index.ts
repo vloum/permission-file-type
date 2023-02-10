@@ -10,3 +10,13 @@
 export interface funcType {
   [key: string]: Function
 }
+
+export interface isTypeFunctionType {
+  is_doc: Function;
+  is_docx: Function;
+  is_image: Function;
+  is_pdf: Function;
+  is_ppt: Function;
+  is_pptx: Function;
+  is_txt: Function;
+}

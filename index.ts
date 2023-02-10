@@ -31,7 +31,10 @@ function splitSupportTypeAr(supportTypeAr: string[], type?: string) {
   return type === 'img' ? imgAr : txtAr
 }
 
-function verifyFormat(supportTypeAr: string[], mime: string, name: string) {
+function verifyFormat(supportTypeAr: Array<string>, mime: string, name: string):boolean {
+  if (!supportTypeAr.includes('.' + name.split('.').pop())) {
+    return false
+  }
   // 先判断mime类型
   let type = ''
   if (mime) {
@@ -47,7 +50,7 @@ function verifyFormat(supportTypeAr: string[], mime: string, name: string) {
   } else if (type) {
     const supportAr = splitSupportTypeAr(supportTypeAr)
     for (const extname of supportAr) {
-      const funName = 'is_' + extname.split('.')[1]
+      const funName = ('is_' + extname.split('.')[1]) as keyof typeof performObject
       if (performObject[funName] && performObject[funName](mime)) {
         return true
       }
@@ -67,7 +70,6 @@ function verifyFormat(supportTypeAr: string[], mime: string, name: string) {
   return false
 }
 
-export default {
-  verifyFormat,
-  ...performObject
-}
+const options = Object.assign({ verifyFormat }, performObject)
+
+export default options
