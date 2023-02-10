@@ -71,6 +71,6 @@ function verifyFormat(supportTypeAr: Array<string>, mime: string, name: string):
   return false
 }
 
-const options = Object.assign({ verifyFormat }, performObject) as optionsTypes
+const permission = Object.assign({ verifyFormat }, performObject) as optionsTypes
 
-export default options
+export default permission
