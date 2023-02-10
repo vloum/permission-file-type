@@ -1,1 +1,4 @@
-#./doc/*
+/doc/*
+
+node_modules
+dist

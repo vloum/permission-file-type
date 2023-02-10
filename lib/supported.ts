@@ -4,11 +4,10 @@
  * @Author: VLOU
  * @Date: 2022-04-22 00:07:29
  * @LastEditors: VLOU
- * @LastEditTime: 2022-05-05 22:56:22
+ * @LastEditTime: 2022-05-15 00:20:00
  */
-module.exports = {
-	imageAr:['.jpg', '.jpeg', '.png', '.ioc', '.gif', '.svg', '.webp'],
-  mimeTypes: [
+	export const imageAr = ['.jpg', '.jpeg', '.png', '.ioc', '.gif', '.svg', '.webp']
+  export const mimeTypes = [
 		'image/jpeg',
 		'image/png',
 		'image/gif',
@@ -143,4 +142,3 @@ module.exports = {
 		'image/jxl',
 		'application/zstd'
 	]
-}
